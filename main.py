@@ -1,6 +1,6 @@
 import streamlit as st
 import random,string
-import pyperclip
+# import pyperclip
 
 result = ''
 
