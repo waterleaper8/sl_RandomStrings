@@ -8,6 +8,7 @@ def randomstr(n):
     randlst = [random.choice(string.ascii_letters + string.digits) for i in range(n)]
     return ''.join(randlst)
 
+st.set_page_config(page_title='ランダム文字列生成', initial_sidebar_state = 'auto')
 st.title('ランダム文字列生成')
 st.subheader('生成したい文字数を入力してください（32文字まで）')
 
