@@ -4,45 +4,19 @@ import random,string
 result = ''
 
 def randomstr(n):
-    # 4
-    if (ascii_l and not ascii_u and not digit and not symbol):
-        randlst = [random.choice(string.ascii_lowercase) for i in range(n)]
-    elif (not ascii_l and ascii_u and not digit and not symbol):
-        randlst = [random.choice(string.ascii_uppercase) for i in range(n)]
-    elif (not ascii_l and not ascii_u and digit and not symbol):
-        randlst = [random.choice(string.digits) for i in range(n)]
-    elif (not ascii_l and not ascii_u and not digit and symbol):
-        randlst = [random.choice(string.punctuation) for i in range(n)]
-
-    # 6
-    elif (ascii_l and ascii_u and not digit and not symbol):
-        randlst = [random.choice(string.ascii_letters) for i in range(n)]
-    elif (ascii_l and not ascii_u and digit and not symbol):
-        randlst = [random.choice(string.ascii_lowercase + string.digits) for i in range(n)]
-    elif (ascii_l and not ascii_u and not digit and symbol):
-        randlst = [random.choice(string.ascii_lowercase + string.punctuation) for i in range(n)]
-    elif (not ascii_l and ascii_u and digit and not symbol):
-        randlst = [random.choice(string.ascii_uppercase + string.digits) for i in range(n)]
-    elif (not ascii_l and ascii_u and not digit and symbol):
-        randlst = [random.choice(string.ascii_uppercase + string.punctuation) for i in range(n)]
-    elif (not ascii_l and not ascii_u and digit and symbol):
-        randlst = [random.choice(string.digits + string.punctuation) for i in range(n)]
-    
-    # 4
-    elif (ascii_l and ascii_u and digit and not symbol):
-        randlst = [random.choice(string.ascii_letters + string.digits) for i in range(n)]
-    elif (ascii_l and ascii_u and not digit and symbol):
-        randlst = [random.choice(string.ascii_letters + string.punctuation) for i in range(n)]
-    elif (ascii_l and not ascii_u and digit and symbol):
-        randlst = [random.choice(string.ascii_lowercase + string.digits + string.punctuation) for i in range(n)]
-    elif (not ascii_l and ascii_u and digit and symbol):
-        randlst = [random.choice(string.ascii_uppercase + string.digits + string.punctuation) for i in range(n)]
-
-    # 1
-    elif (ascii_l and ascii_u and digit and symbol):
-        randlst = [random.choice(string.ascii_letters + string.digits + string.punctuation) for i in range(n)]
-    else:
+    chars = ''
+    if (ascii_l):
+        chars += string.ascii_lowercase
+    if (ascii_u):
+        chars += string.ascii_uppercase
+    if (digit):
+        chars += string.digits
+    if (symbol):
+        chars += string.punctuation
+    if (chars == ''):
         return 'どれかチェックを入れてください'
+    else:
+        randlst = [random.choice(chars) for i in range(n)]
     return ''.join(randlst)
 
 st.set_page_config(page_title='ランダム文字列生成', initial_sidebar_state = 'auto')
