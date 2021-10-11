@@ -23,9 +23,9 @@ st.set_page_config(page_title='ランダム文字列生成', initial_sidebar_sta
 st.title('ランダム文字列生成')
 
 st.subheader('組み合わせを選択してください')
-ascii_l = st.checkbox('英小文字')
-ascii_u = st.checkbox('英大文字')
-digit = st.checkbox('数字')
+ascii_l = st.checkbox('英小文字', True)
+ascii_u = st.checkbox('英大文字', True)
+digit = st.checkbox('数字', True)
 symbol = st.checkbox('記号')
 
 st.subheader('生成したい文字数を入力してください（32文字まで）')
