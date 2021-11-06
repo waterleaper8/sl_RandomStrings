@@ -19,8 +19,8 @@ def randomstr(n):
         randlst = [random.choice(chars) for i in range(n)]
     return ''.join(randlst)
 
-st.set_page_config(page_title='ランダム文字列生成', initial_sidebar_state = 'auto')
-st.title('ランダム文字列生成')
+st.set_page_config(page_title='パスワード生成アプリ', initial_sidebar_state = 'auto')
+st.title('パスワード生成アプリ')
 
 st.subheader('組み合わせを選択してください')
 ascii_l = st.checkbox('英小文字', True)
