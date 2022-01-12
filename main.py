@@ -1,9 +1,11 @@
 import streamlit as st
-import random,string
+import random
+import string
 
 result = ''
 
-def randomstr(n):
+
+def randomstr(length):
     chars = ''
     if (ascii_l):
         chars += string.ascii_lowercase
@@ -16,10 +18,11 @@ def randomstr(n):
     if (chars == ''):
         return 'どれかチェックを入れてください'
     else:
-        randlst = [random.choice(chars) for i in range(n)]
+        randlst = [random.choice(chars) for i in range(length)]
     return ''.join(randlst)
 
-st.set_page_config(page_title='パスワード生成アプリ', initial_sidebar_state = 'auto')
+
+st.set_page_config(page_title='パスワード生成アプリ', initial_sidebar_state='auto')
 st.title('パスワード生成アプリ')
 
 st.subheader('組み合わせを選択してください')
