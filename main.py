@@ -22,8 +22,8 @@ def randomstr(length):
     return ''.join(randlst)
 
 
-st.set_page_config(page_title='パスワード生成アプリ', initial_sidebar_state='auto')
-st.title('パスワード生成アプリ')
+st.set_page_config(page_title='パスワード生成ツール', initial_sidebar_state='auto')
+st.title('パスワード生成ツール')
 
 st.subheader('組み合わせを選択してください')
 ascii_l = st.checkbox('英小文字', True)
